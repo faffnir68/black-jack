@@ -12,7 +12,7 @@ class Deck():
                 self.deck.append(result)
 
     def __str__(self):
-        pass
+        return f"{self.deck}"
 
     def shuffle_cards(self):
         return shuffle(self.deck)
