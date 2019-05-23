@@ -1,6 +1,8 @@
+from deck import Deck
 
-class Player():
+class Player(Deck):
     def __init__(self, name, balance = 0):
+        Deck.__init__(self)
         self.name = name
         self.balance = balance
 
@@ -15,4 +17,16 @@ class Player():
         self.balance = self.balance - lose_amt
         print(f"You lose {lose_amt}")
 
-    
+d = Deck()
+d.shuffle_cards()
+player1 = Player("Anthony", 100)
+player1.shuffle_cards()
+player_fc = (player1.deal())
+player_sc = (player1.deal())
+
+if player_fc[0] > player_sc[0]:
+    print(player_fc[0], player_fc[1])
+else:
+    print(player_sc[0], player_sc[1])
+
+

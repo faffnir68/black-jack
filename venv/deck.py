@@ -10,18 +10,15 @@ class Deck():
             for c_nb in cards_nb:
                 result = c_nb, c_col
                 self.deck.append(result)
-        print(self.deck)
 
     def __str__(self):
         pass
 
     def shuffle_cards(self):
-        shuffle(self.deck)
-        print(self.deck)
+        return shuffle(self.deck)
 
     def deal(self):
-        print(self.deck.pop())
-
+        return self.deck.pop()
 
 
 
