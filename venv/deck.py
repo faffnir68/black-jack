@@ -2,23 +2,25 @@ import random
 from random import shuffle
 
 class Deck():
-
     def __init__(self):
+        self.deck = []
         cards_color = ['Heart', 'Diamond', 'Spade', 'Club']
         cards_nb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-        combo_cards = []
         for c_col in cards_color:
             for c_nb in cards_nb:
                 result = c_nb, c_col
-                combo_cards.append(result)
-        print(combo_cards)
+                self.deck.append(result)
+
+    def __str__(self):
+        return f"{self.deck}"
 
     def shuffle_cards(self):
-        print(shuffle(combo_cards))
+        return shuffle(self.deck)
+
+    def deal(self):
+        return self.deck.pop()
 
 
-d = Deck()
-d.shuffle_cards()
 
 
 """
